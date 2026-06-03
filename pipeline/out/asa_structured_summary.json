@@ -1,0 +1,32 @@
+{
+  "chunks": 594,
+  "modules": {
+    "Introduction": 10,
+    "Overview": 6,
+    "Registers": 76,
+    "Physical Layer Gen2020": 163,
+    "Data Link Layer": 98,
+    "Security": 73,
+    "ASEP": 92,
+    "Physical Layer MLE": 56,
+    "Appendices": 16,
+    "Unknown": 4
+  },
+  "content_types": {
+    "text": 233,
+    "figure": 66,
+    "primitive_def": 48,
+    "state_machine": 6,
+    "register_overview": 6,
+    "register": 65,
+    "asep_protocol": 101,
+    "timing_spec": 11,
+    "security": 7,
+    "mle_phy": 51
+  },
+  "register_address_count": 65,
+  "table_caption_count": 689,
+  "figure_caption_count": 124,
+  "avg_text_len": 728.9,
+  "max_text_len": 4998
+}

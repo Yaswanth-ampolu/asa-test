@@ -1,0 +1,1619 @@
+[
+  {
+    "address": "1.0001",
+    "name": "PMA_PMD_PCS_capability",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.1",
+    "page": 32,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:14", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "13", "name": "CapableUpRX2", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG2 Up receiver, 0: not capable" },
+      { "bits": "12", "name": "CapableUpRX1", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG1 Up receiver, 0: not capable" },
+      { "bits": "11", "name": "CapableUpTX2", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG2 Up transmitter, 0: not capable" },
+      { "bits": "10", "name": "CapableUpTX1", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG1 Up transmitter, 0: not capable" },
+      { "bits": "9", "name": "CapableDnRX5", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG5 Dn receiver, 0: not capable" },
+      { "bits": "8", "name": "CapableDnRX4", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG4 Dn receiver, 0: not capable" },
+      { "bits": "7", "name": "CapableDnRX3", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG3 Dn receiver, 0: not capable" },
+      { "bits": "6", "name": "CapableDnRX2", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG2 Dn receiver, 0: not capable" },
+      { "bits": "5", "name": "CapableDnRX1", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG1 Dn receiver, 0: not capable" },
+      { "bits": "4", "name": "CapableDnTX5", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG5 Dn transmitter, 0: not capable" },
+      { "bits": "3", "name": "CapableDnTX4", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG4 Dn transmitter, 0: not capable" },
+      { "bits": "2", "name": "CapableDnTX3", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG3 Dn transmitter, 0: not capable" },
+      { "bits": "1", "name": "CapableDnTX2", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG2 Dn transmitter, 0: not capable" },
+      { "bits": "0", "name": "CapableDnTX1", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of SG1 Dn transmitter, 0: not capable" }
+    ]
+  },
+  {
+    "address": "1.0002",
+    "name": "SGconfig",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.2",
+    "page": 32,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:13", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved, set to 0" },
+      { "bits": "12:9", "name": "ASA_Version", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0: ASA 1.01; 1: ASA 1.1; 2: ASA 2.0; others reserved" },
+      { "bits": "8:7", "name": "Aggregated_Links", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Number of links to use in aggregation; 0 if not supported" },
+      { "bits": "6:5", "name": "MDI_GroupID", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "uint identifier for port/MDI on a device; checked during startup (4.2.7.1)" },
+      { "bits": "4:3", "name": "Up_SG", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0: Speed Grade 1; 1: Speed Grade 2; upstream speed grade" },
+      { "bits": "2:1", "name": "Dn_SG", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "000: SG1; 001: SG2; 010: SG3; 011: SG4; 100: SG5; downstream speed grade" },
+      { "bits": "0", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" }
+    ]
+  },
+  {
+    "address": "1.0003",
+    "name": "PMA_PMD_PCS_capability_2",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.3",
+    "page": 34,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": "LinkAggregation",
+    "fields": [
+      { "bits": "15:2", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "1:0", "name": "Number_of_Links", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: single link; 1: dual link capable; 2: triple link capable; 3: quad link capable" }
+    ]
+  },
+  {
+    "address": "1.0004",
+    "name": "ConnectivityIdentification",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.4",
+    "page": 34,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:3", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "2", "name": "MDI_GroupID_mismatch_error", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Indicates mismatch between own MDI GroupID and link partner's value; resets to 0 on Power-On state" },
+      { "bits": "1:0", "name": "LinkPartner_MDI_GroupID", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0-3: MDI GroupID received during startup" }
+    ]
+  },
+  {
+    "address": "1.0005",
+    "name": "ASAversionCapability",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.5",
+    "page": 35,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:3", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "2", "name": "CapableASA2_0", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of ASA 2.0, 0: not capable" },
+      { "bits": "1", "name": "CapableASA1_1", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of ASA 1.1, 0: not capable" },
+      { "bits": "0", "name": "CapableASA1_01", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node is capable of ASA 1.01, 0: not capable" }
+    ]
+  },
+  {
+    "address": "1.0006",
+    "name": "ASAnodeState",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.6",
+    "page": 35,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:4", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "3:0", "name": "ASA_Node_State", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: PowerOn/Init; 1: Startup; 2: OAM Config; 3: Normal Mode; 4: Test Mode; 5: Light Sleep; 6: Fail; 7: Deep Sleep; others reserved" }
+    ]
+  },
+  {
+    "address": "1.0007",
+    "name": "SoftReset",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.7",
+    "page": 36,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:1", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "0", "name": "Soft_Reset", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "High active, self-clearing on write. Resets all state machines and status registers; keeps configuration. Applies to entire ASA node." }
+    ]
+  },
+  {
+    "address": "1.0008",
+    "name": "ASAnodeIRQ",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.8",
+    "page": 36,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:14", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "13", "name": "ASD_flag", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "ASD interrupt flag, detected locally" },
+      { "bits": "12", "name": "ASE_flag", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "ASE interrupt flag, detected locally" },
+      { "bits": "11", "name": "OAM_flag", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "OAM interrupt flag, detected locally" },
+      { "bits": "10", "name": "DLL_Receive_flag", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "DLL receive interrupt flag, detected locally" },
+      { "bits": "9", "name": "DLL_Transmit_flag", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "DLL transmit interrupt flag, detected locally" },
+      { "bits": "8", "name": "PTB_flag", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "PTB interrupt flag, detected locally" },
+      { "bits": "7", "name": "Security_flag", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Security interrupt flag, detected locally" },
+      { "bits": "6:2", "name": "Remote_nodeID", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "For IRQ received through OAM, gives the issuing nodeID (5 bits)" },
+      { "bits": "1", "name": "Remote_PMA_PMD_PCS", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Remote PMA/PMD/PCS interrupt flag, received through OAM" },
+      { "bits": "0", "name": "Local_PMA_PMD_PCS", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Local PMA/PMD/PCS interrupt flag, detected locally" }
+    ]
+  },
+  {
+    "address": "1.0020",
+    "name": "MLEcapability1",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.9",
+    "page": 37,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": "MLE",
+    "fields": [
+      { "bits": "15", "name": "MLES_sym1G0_capability", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: capable of symmetric 1G0 mode, 0: not capable" },
+      { "bits": "14", "name": "MLES_sym2G5_capability", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: capable of symmetric 2G5 mode, 0: not capable" },
+      { "bits": "13", "name": "MLES_sym5G0_capability", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: capable of symmetric 5G0 mode, 0: not capable" },
+      { "bits": "12:0", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved, set to 0" }
+    ]
+  },
+  {
+    "address": "1.0021",
+    "name": "MLEcapability2",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.10",
+    "page": 37,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": "MLE",
+    "fields": [
+      { "bits": "15", "name": "MLES_asym_DnTX_UpRX", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: capable of being DnTX/UpRX, 0: not capable" },
+      { "bits": "14", "name": "MLES_asym_DnRX_UpTX", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: capable of being DnRX/UpTX, 0: not capable" },
+      { "bits": "13", "name": "MLES_2G5_M_capability", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: capable of MLES_2G5_M mode, 0: not capable" },
+      { "bits": "12", "name": "MLES_5G0_M_capability", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: capable of MLES_5G0_M mode, 0: not capable" },
+      { "bits": "11", "name": "MLES_10G_M_capability", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: capable of MLES_10G_M mode, 0: not capable" },
+      { "bits": "10", "name": "MLES_10G_G_capability", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: capable of MLES_10G_G mode, 0: not capable" },
+      { "bits": "9:0", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved, set to 0" }
+    ]
+  },
+  {
+    "address": "1.0022",
+    "name": "MLEconfig",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.11",
+    "page": 38,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": "MLE",
+    "fields": [
+      { "bits": "15", "name": "MLE_asym_config", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "1: DnTX/UpRX; 0: DnRX/UpTX; does not apply to symmetric modes" },
+      { "bits": "14:11", "name": "MLE_config", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0000: MLES_sym1G0; 0001: MLES_sym2G5; 0010: MLES_sym5G0; 0101: MLES_2G5_M; 0110: MLES_5G0_M; 0111: MLES_10G_M; 1000: MLES_10G_G; 1111: do not use" },
+      { "bits": "10:0", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved, set to 0" }
+    ]
+  },
+  {
+    "address": "1.0100",
+    "name": "LinkTraining",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.12",
+    "page": 39,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:11", "name": "LPerrors", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Number of ERROR states from link partner during last startup; saturates to 0x1F" },
+      { "bits": "10", "name": "COMready", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: communication not possible; 1: communication ready; goes high after startup, low on link loss" },
+      { "bits": "9:8", "name": "Polarity_Detected", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "00: not evaluated; 01: normal polarity; 10: inverted polarity; 11: polarity detection failed" },
+      { "bits": "7:0", "name": "Link_Training_Time", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Link Training Time in ms (uint8); 0xFF: measurement error; saturates at 0xFB" }
+    ]
+  },
+  {
+    "address": "1.0101",
+    "name": "LinkQuality",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.13",
+    "page": 39,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:10", "name": "Link_Losses", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Counts entirely lost TDD bursts since last startup; saturates to 0x3F; resets to 0 on Power-On/Fail" },
+      { "bits": "9:0", "name": "Physical_Layer_Block_Losses", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Counts physical layer blocks with uncorrectable FEC since last startup; saturates to 0x3FF; resets to 0 on Power-On/Fail" }
+    ]
+  },
+  {
+    "address": "1.0102",
+    "name": "SQI",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.14",
+    "page": 40,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "7:5", "name": "Worst_case_SQI", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Lowest recorded SQI since last read or last completed startup" },
+      { "bits": "4", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "3:1", "name": "Current_SQI", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Monotonic scale 0x00 (link loss) to 0x07 (best); BER <10^-12 for SQI >= 3" },
+      { "bits": "0", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" }
+    ]
+  },
+  {
+    "address": "1.0103",
+    "name": "MSE",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.15",
+    "page": 41,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:10", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "9", "name": "MSEvalid", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: not valid; 1: valid" },
+      { "bits": "8:0", "name": "MSE", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Unsigned integer; mean square error at slicer scaled 0..511; refreshed every 3-8 TDD cycles" }
+    ]
+  },
+  {
+    "address": "1.0104",
+    "name": "FECstat",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.16",
+    "page": 42,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15", "name": "FECstat_valid", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: not valid; 1: valid" },
+      { "bits": "14:0", "name": "Corrected_FEC_frames", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Number of corrected FEC frames since last read or last completed startup; saturates to 0x7FFF; resets to 0" }
+    ]
+  },
+  {
+    "address": "1.0105",
+    "name": "HarnessDiagnostics",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.17",
+    "page": 42,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:14", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "13:8", "name": "DefectDistance", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Unsigned integer; unit 0.5m cable (±0.25m uncertainty); 0x01: 0.5m; 0x3E: 31m; 0x3F: cannot resolve" },
+      { "bits": "7", "name": "DistanceValid", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: not valid; 1: valid" },
+      { "bits": "6:3", "name": "DefectType", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0001: Cable OK; 0100: Short; 1000: Open; 0011: Noise; 0101: bus wires shorted; etc." },
+      { "bits": "2", "name": "TypeValid", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: not valid; 1: valid" },
+      { "bits": "1:0", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" }
+    ]
+  },
+  {
+    "address": "1.0106",
+    "name": "DiagnosticsTestCtrl",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.18",
+    "page": 44,
+    "rw_type": "RW",
+    "access": "L",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:5", "name": "Reserved", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "Reserved" },
+      { "bits": "4:1", "name": "TestType", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "0000: HarnessDiagnostics; 0001: TX Linearity; 0010: TX Jitter; 0011: TX Droop; 0100: TX PSD; 0101: TX BER; 0110: RX Noise Immunity; 0111: RX BER; 1000: S11 Termination; 1001: Phase1G Loopback; 1010-1111: reserved" },
+      { "bits": "0", "name": "Enable", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "1: active; immediately disrupts data communication and starts respective test/diagnostic mode" }
+    ]
+  },
+  {
+    "address": "1.0107",
+    "name": "LinkIdentification",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.19",
+    "page": 44,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:3", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "2", "name": "LinkID_error", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Indicates problem with received LinkID; resets to 0 on Power-On state" },
+      { "bits": "1:0", "name": "LinkID", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Link identifier; valid values 0-3; reset/default value is 0" }
+    ]
+  },
+  {
+    "address": "1.0108",
+    "name": "ExtendedLinkTrainingStatus",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "3.2.20",
+    "page": 45,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:13", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "12:8", "name": "Timeouts", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Number of timeouts during last startup; saturates to 0x1F" },
+      { "bits": "7:0", "name": "RetryCounter", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Equal to ph1G_retry_cnt of Phase1G state machine" }
+    ]
+  },
+  {
+    "address": "1.0200",
+    "address_range_end": "1.0299",
+    "name": "LinkAggregation_Lane1",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "4.8",
+    "page": 158,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": "LinkAggregation",
+    "fields": [
+      { "bits": "15:0", "name": "Lane1_registers", "rw_type": "VERIFY", "access": "O", "privilege": "RID", "description": "Registers 1.0100-1.0199 mirrored for Lane 1 when Link Aggregation is implemented (see section 4.8)" }
+    ]
+  },
+  {
+    "address": "1.0300",
+    "address_range_end": "1.0399",
+    "name": "LinkAggregation_Lane2",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "4.8",
+    "page": 158,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": "LinkAggregation",
+    "fields": [
+      { "bits": "15:0", "name": "Lane2_registers", "rw_type": "VERIFY", "access": "O", "privilege": "RID", "description": "Registers 1.0100-1.0199 mirrored for Lane 2 when Link Aggregation is implemented (see section 4.8)" }
+    ]
+  },
+  {
+    "address": "1.0400",
+    "address_range_end": "1.0499",
+    "name": "LinkAggregation_Lane3",
+    "domain": 1,
+    "subdomain_kind": null,
+    "section": "4.8",
+    "page": 158,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": "LinkAggregation",
+    "fields": [
+      { "bits": "15:0", "name": "Lane3_registers", "rw_type": "VERIFY", "access": "O", "privilege": "RID", "description": "Registers 1.0100-1.0199 mirrored for Lane 3 when Link Aggregation is implemented (see section 4.8)" }
+    ]
+  },
+  {
+    "address": "2.0001",
+    "name": "nodeID",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.1",
+    "page": 47,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:5", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "4:0", "name": "nodeID", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Unsigned integer; 0: nodeID unset; 1: root node; 2-31: leaf or branch device nodes" }
+    ]
+  },
+  {
+    "address": "2.0002",
+    "name": "DLLconfig1",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.2",
+    "page": 47,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:10", "name": "Nr_DLP_TX", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Unsigned integer; number of supported DLP_TX" },
+      { "bits": "9:4", "name": "Nr_DLP_RX", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Unsigned integer; number of supported DLP_RX" },
+      { "bits": "3:0", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" }
+    ]
+  },
+  {
+    "address": "2.0003",
+    "name": "DLLconfig2",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.3",
+    "page": 48,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:4", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "3", "name": "CapableKey256", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node capable of 256-bit keys, 0: not capable" },
+      { "bits": "2", "name": "CapableKey128", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node capable of 128-bit keys, 0: not capable" },
+      { "bits": "1", "name": "CapableSecEnc", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node capable of security encryption, 0: not capable" },
+      { "bits": "0", "name": "CapableSecAuth", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: node capable of security authentication, 0: not capable" }
+    ]
+  },
+  {
+    "address": "2.0004",
+    "address_range_end": "2.0005",
+    "name": "VendorID",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.4",
+    "page": 48,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "vendorID_15_0", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "vendorID[15:0] — vendor identification (implementer defined) in register 2.0004" },
+      { "bits": "15:0", "name": "vendorID_31_16", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "vendorID[31:16] — vendor identification in register 2.0005" }
+    ]
+  },
+  {
+    "address": "2.0006",
+    "address_range_end": "2.0007",
+    "name": "DeviceID",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.5",
+    "page": 48,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "deviceID_15_0", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "deviceID[15:0] — device identification (implementer defined) in register 2.0006" },
+      { "bits": "15:0", "name": "deviceID_31_16", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "deviceID[31:16] — device identification in register 2.0007" }
+    ]
+  },
+  {
+    "address": "2.0008",
+    "address_range_end": "2.0133",
+    "name": "DLLaddrtable",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.6",
+    "page": 49,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:14", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved (first register per streamID)" },
+      { "bits": "13", "name": "valid_targetID0", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "1: targetID0 set, 0: not set (first register per streamID)" },
+      { "bits": "12:8", "name": "targetID0", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "targetID0 for this DLP_TX (first register per streamID)" },
+      { "bits": "7:6", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved (first register per streamID)" },
+      { "bits": "5", "name": "valid_targetID1", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "1: targetID1 set, 0: not set (first register per streamID)" },
+      { "bits": "4:0", "name": "targetID1", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "targetID1 for this DLP_TX (first register per streamID)" }
+    ]
+  },
+  {
+    "address": "2.0140",
+    "name": "DLLtransmitErr",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.7",
+    "page": 52,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:12", "name": "Reserved", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "11:6", "name": "DLPaddrErr", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "DLP_TX_ID selected for transmission but has no entry in address table" },
+      { "bits": "5:0", "name": "DLPmapperErr", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "DLP_TX_ID evaluated by Mapper but not implemented in node" }
+    ]
+  },
+  {
+    "address": "2.0141",
+    "name": "DLLcounter",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.8",
+    "page": 52,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "DLLcounter", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Current counter value of the mapper; value only changes when mapper is evaluated" }
+    ]
+  },
+  {
+    "address": "2.0142",
+    "name": "DLLcountermin",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.9",
+    "page": 52,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "DLLcountermin", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Minimum/Reset value of DLLcounter; resets to 0x0000" }
+    ]
+  },
+  {
+    "address": "2.0143",
+    "name": "DLLcountermax",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.10",
+    "page": 53,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "DLLcountermax", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Maximum/Rollover value of DLLcounter; resets to 0x0000" }
+    ]
+  },
+  {
+    "address": "2.0144",
+    "name": "DLLlinemin",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.11",
+    "page": 53,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "DLLlinemin", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Lower index pointer into mapper table; resets to 0" }
+    ]
+  },
+  {
+    "address": "2.0145",
+    "name": "DLLlinemax",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.12",
+    "page": 53,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "DLLlinemax", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Upper index pointer into mapper table; cannot be larger than DLLmtablelen; resets to 0" }
+    ]
+  },
+  {
+    "address": "2.0146",
+    "address_range_end": "2.2065",
+    "name": "DLLmappertable",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.13",
+    "page": 53,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "BitMask", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Bit mask for mapper counter (first register per mapper table line; 2.0146+3*n)" },
+      { "bits": "15:0", "name": "CompareValue", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Compare value for mapper counter (second register per mapper table line; 2.0147+3*n)" },
+      { "bits": "15", "name": "LineValidFlag", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "1: DLL mapper table line valid; 0: not valid (third register per line; 2.0148+3*n)" },
+      { "bits": "5:0", "name": "MapperTarget", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "streamID/DLP_TX_ID_toSend (third register per mapper table line)" }
+    ]
+  },
+  {
+    "address": "2.2066",
+    "name": "DLLmtablelen",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.14",
+    "page": 55,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:10", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "9:0", "name": "DLLmtablelen", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Unsigned integer; implemented number of mapper table lines; maximum value is 640" }
+    ]
+  },
+  {
+    "address": "2.2067",
+    "address_range_end": "2.2130",
+    "name": "DLLdmxtable1",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.15",
+    "page": 55,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:11", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "10:6", "name": "nodeID", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Container nodeID for DLP_RX_ID; root node: resets to 0; non-root: resets to 1" },
+      { "bits": "5:0", "name": "streamID", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Container streamID for DLP_RX_ID; resets to 0" }
+    ]
+  },
+  {
+    "address": "2.2131",
+    "address_range_end": "2.2146",
+    "name": "DLLdmxtable2",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.16",
+    "page": 58,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:14", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "13", "name": "IDvalid_upper", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "1: upper targetID set, 0: not set" },
+      { "bits": "13:8", "name": "DLP_RX_ID_upper", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "DLP_RX_ID to demultiplex to (upper slot)" },
+      { "bits": "7:6", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "5", "name": "IDvalid_lower", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "1: lower targetID set, 0: not set" },
+      { "bits": "5:0", "name": "DLP_RX_ID_lower", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "DLP_RX_ID to demultiplex to (lower slot)" }
+    ]
+  },
+  {
+    "address": "2.2147",
+    "name": "DLLdmxstatus",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.17",
+    "page": 59,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "LocalError", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "uint8; number of demultiplexing errors for local sinks; saturates to 0xFF; resets to 0" },
+      { "bits": "7:0", "name": "ForwardError", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "uint8; number of demultiplexing errors for forwarding; saturates to 0xFF; resets to 0" }
+    ]
+  },
+  {
+    "address": "2.2148",
+    "name": "OAMdmxTX",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.18",
+    "page": 59,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:6", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "5:0", "name": "DLP_TX_dmx", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Identifies DLP_RX_ID that OAM is statically connected to (far-side); 0: DLP_TX of OAM is part of this node's mapper operation (near side); resets to 0" }
+    ]
+  },
+  {
+    "address": "2.2200",
+    "address_range_end": "2.2202",
+    "name": "PTBclk",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.19",
+    "page": 60,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "PTBclk_15_0", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "PTBclk[15:0] — unsigned integer, local PTB clock counter (register 2.2200)" },
+      { "bits": "15:0", "name": "PTBclk_31_16", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "PTBclk[31:16] (register 2.2201)" },
+      { "bits": "15:0", "name": "PTBclk_47_32", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "PTBclk[47:32] (register 2.2202)" }
+    ]
+  },
+  {
+    "address": "2.2203",
+    "name": "PTBstatus",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.20",
+    "page": 60,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:13", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "12:9", "name": "PTBoffset", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "int3 sign-magnitude; calculated offset of clock follower; range -7..+7; 0x08: PTB update error/invalid" },
+      { "bits": "8", "name": "PTBlocked", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: follower not locked / leader without valid timing reference; 1: follower locked to leader / leader has valid reference" },
+      { "bits": "7:0", "name": "PTBdelay", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "uint8; calculated cable latency in PTB ticks for this node; diagnostics information" }
+    ]
+  },
+  {
+    "address": "2.2204",
+    "address_range_end": "2.2206",
+    "name": "PTBoamClk",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.21",
+    "page": 60,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "PTBoamClk_15_0", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "PTBoamClk[15:0] — last valid PTB clock counter received by OAM (register 2.2204)" },
+      { "bits": "15:0", "name": "PTBoamClk_31_16", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "PTBoamClk[31:16] (register 2.2205)" },
+      { "bits": "15:0", "name": "PTBoamClk_47_32", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "PTBoamClk[47:32] (register 2.2206)" }
+    ]
+  },
+  {
+    "address": "2.2207",
+    "name": "PTBoamDly",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.22",
+    "page": 60,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "PTBoamDly", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Unsigned integer; calculated delay between local PTBclk and last received OAM time stamp in PTB ticks; resets to 0" }
+    ]
+  },
+  {
+    "address": "2.2208",
+    "name": "OAMerrors1",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.23",
+    "page": 61,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "OAM_header_decode_error", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Accumulated OAMHEADER_DECODE_ERR since reset or last readout; saturates to 0xFF; resets to 0" },
+      { "bits": "7:0", "name": "OAM_header_duplicate_frame_ID_error", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Accumulated OAMHEADER_DUPLID_ERR since reset or last readout; saturates to 0xFF; resets to 0" }
+    ]
+  },
+  {
+    "address": "2.2209",
+    "name": "OAMerrors2",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.24",
+    "page": 61,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "OAM_header_missing_frame_ID_error", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Accumulated OAMHEADER_MISSID_ERR since reset or last readout; saturates to 0xFF; resets to 0" },
+      { "bits": "7:0", "name": "OAM_payload_decode_error", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Accumulated OAMPAYLOAD_DECODE_ERR since reset or last readout; saturates to 0xFF; resets to 0" }
+    ]
+  },
+  {
+    "address": "2.2210",
+    "name": "DLLerrors1",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.25",
+    "page": 61,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "DLL_header_decode_error", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Accumulated DLL decode errors since reset or last readout; saturates to 0xFF; resets to 0" },
+      { "bits": "7:0", "name": "DLL_header_duplicate_packetID_error", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Accumulated duplicate_packetID since reset or last readout; saturates to 0xFF; resets to 0" }
+    ]
+  },
+  {
+    "address": "2.2211",
+    "name": "DLLerrors2",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.26",
+    "page": 62,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "DLL_header_missing_packetID_error", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Accumulated missing_packetID since reset or last readout; saturates to 0xFF; resets to 0" },
+      { "bits": "7:0", "name": "Reserved", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Reserved" }
+    ]
+  },
+  {
+    "address": "2.2212",
+    "name": "ExtendedPTBstatus",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.27",
+    "page": 62,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:10", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "9:5", "name": "DelayReplies", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Equal to cnt_dlyReply_received from PTB state machine" },
+      { "bits": "4:0", "name": "Follows", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Equal to cnt_follow_received from PTB state machine" }
+    ]
+  },
+  {
+    "address": "2.2250",
+    "name": "LightSleepCapability",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.28",
+    "page": 63,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": "LightSleep",
+    "fields": [
+      { "bits": "15:1", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "0", "name": "CapableLS", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: no support; 1: node supports LightSleep" }
+    ]
+  },
+  {
+    "address": "2.2251",
+    "name": "LightSleepStatus1",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.29",
+    "page": 63,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": "LightSleep",
+    "fields": [
+      { "bits": "15", "name": "LSstatus1_valid", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: not valid; 1: register content is valid" },
+      { "bits": "14:9", "name": "LightSleep_denied", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Accumulated LSdeny received since reset or last readout; saturates to 0x3F; resets to 0" },
+      { "bits": "8:3", "name": "LightSleep_announced", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Accumulated LSannounce received since reset or last readout; saturates to 0x3F; resets to 0" },
+      { "bits": "2", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "1:0", "name": "LightSleep_status", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: normal mode; 1: Light Sleep mediation ongoing; 2: Light Sleep ongoing; 3: restarting from LightSleep" }
+    ]
+  },
+  {
+    "address": "2.2252",
+    "name": "LightSleepStatus2",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.30",
+    "page": 63,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": "LightSleep",
+    "fields": [
+      { "bits": "15", "name": "LSstatus2_valid", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: not valid; 1: register content is valid" },
+      { "bits": "14:11", "name": "LightSleep_impossible", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Accumulated LSpossible=FALSE evaluated since reset or last readout; saturates to 0x0F; resets to 0" },
+      { "bits": "10:6", "name": "Impossible_node", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "nodeID of node whose parameters led to last LSpossible=FALSE" },
+      { "bits": "5:1", "name": "LightSleep_executed", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Number of Light Sleep cycles executed since reset or last readout; saturates to 0x1F; resets to 0" },
+      { "bits": "0", "name": "LightSleep_fail", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Link failed to come back from LightSleep; saturates to 1; resets to 0" }
+    ]
+  },
+  {
+    "address": "2.2253",
+    "name": "LightSleepTest1",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.31",
+    "page": 64,
+    "rw_type": "RW",
+    "access": "L",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": "LightSleep",
+    "fields": [
+      { "bits": "15:13", "name": "Reserved", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "Reserved" },
+      { "bits": "12", "name": "LightSleep_test_trigger", "rw_type": "SC", "access": "L", "privilege": "RID", "description": "Test triggered by writing a 1; triggers root node to mediate and execute LightSleep" },
+      { "bits": "11:0", "name": "LightSleep_test_SleepCycles", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "uint; number of TDD cycles to sleep" }
+    ]
+  },
+  {
+    "address": "2.2254",
+    "address_range_end": "2.2256",
+    "name": "LightSleepTest2",
+    "domain": 2,
+    "subdomain_kind": null,
+    "section": "3.3.32",
+    "page": 64,
+    "rw_type": "RW",
+    "access": "L",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": "LightSleep",
+    "fields": [
+      { "bits": "15:0", "name": "PTBbedtime_15_0", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "PTBbedtime[15:0] — unsigned integer; PTBbedtime to be used for LightSleep test (register 2.2254)" },
+      { "bits": "15:0", "name": "PTBbedtime_31_16", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "PTBbedtime[31:16] (register 2.2255)" },
+      { "bits": "15:0", "name": "PTBbedtime_47_32", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "PTBbedtime[47:32] (register 2.2256)" }
+    ]
+  },
+  {
+    "address": "3.0001",
+    "name": "securityPolicy",
+    "domain": 3,
+    "subdomain_kind": null,
+    "section": "3.4.1",
+    "page": 65,
+    "rw_type": "RO",
+    "access": "L",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": "Security",
+    "fields": [
+      { "bits": "15:2", "name": "Reserved", "rw_type": "RO", "access": "L", "privilege": "RID", "description": "Reserved" },
+      { "bits": "1:0", "name": "securityPolicy", "rw_type": "RO", "access": "L", "privilege": "RID", "description": "0b00: No Security; 0b01: Authentication only; 0b11: Authentication and Encryption; 0b10: Reserved" }
+    ]
+  },
+  {
+    "address": "3.0002",
+    "name": "droppedContainersSecRX",
+    "domain": 3,
+    "subdomain_kind": null,
+    "section": "3.4.2",
+    "page": 66,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": "Security",
+    "fields": [
+      { "bits": "15:0", "name": "droppedContainersSecRX", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Number of dropped/rejected containers on RX path; saturating counter" }
+    ]
+  },
+  {
+    "address": "3.0003",
+    "name": "droppedContainersSecTX",
+    "domain": 3,
+    "subdomain_kind": null,
+    "section": "3.4.3",
+    "page": 66,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": "Security",
+    "fields": [
+      { "bits": "15:0", "name": "droppedContainersSecTX", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Number of dropped/rejected containers on TX path; saturating counter" }
+    ]
+  },
+  {
+    "address": "4/5.i.0001",
+    "address_range_end": "4/5.i.0003",
+    "name": "fullPacketID",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.1.1",
+    "page": 67,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "fullPacketID_15_0", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "fullPacketID[15:0] — 48-bit counter; incremented per DLP_TX container sent; lower 5 bits copied to container header (register .0001)" },
+      { "bits": "15:0", "name": "fullPacketID_31_16", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "fullPacketID[31:16] (register .0002)" },
+      { "bits": "15:0", "name": "fullPacketID_47_32", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "fullPacketID[47:32] (register .0003)" }
+    ]
+  },
+  {
+    "address": "4/5.i.0004",
+    "name": "ASEP_Stream_Type",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.1.2",
+    "page": 68,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:7", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "6:0", "name": "streamType", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "ASEP stream type as listed in Table 7-1" }
+    ]
+  },
+  {
+    "address": "4/5.i.0005",
+    "name": "ASEP_Stream_VendorID",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.1.3",
+    "page": 68,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "streamVendorID", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Vendor-defined field to further identify a stream, especially among identical stream types" }
+    ]
+  },
+  {
+    "address": "4/5.i.0006",
+    "name": "ASEP_Test",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.1.4",
+    "page": 68,
+    "rw_type": "RW",
+    "access": "L",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:1", "name": "Reserved", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "Reserved" },
+      { "bits": "0", "name": "ASEP_Test_enable", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "1: test mode on; 0: test mode off. ASEP Test mode on ASE is further subdivided (see section 3.6.3)" }
+    ]
+  },
+  {
+    "address": "4/5.i.0051",
+    "name": "ASEP_Control_Interface_Quad_Pin_Capability",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.1.5.1",
+    "page": 69,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:14", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "13", "name": "Pin_Quad_15_12_SPI_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: SPI capable for pin quad [15:12], 0: not capable" },
+      { "bits": "12", "name": "Pin_Quad_15_12_vendor_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for pin quad [15:12], 0: not capable" },
+      { "bits": "11:10", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "9", "name": "Pin_Quad_11_8_SPI_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: SPI capable for pin quad [11:8], 0: not capable" },
+      { "bits": "8", "name": "Pin_Quad_11_8_vendor_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for pin quad [11:8], 0: not capable" },
+      { "bits": "7:6", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "5", "name": "Pin_Quad_7_4_SPI_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: SPI capable for pin quad [7:4], 0: not capable" },
+      { "bits": "4", "name": "Pin_Quad_7_4_vendor_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for pin quad [7:4], 0: not capable" },
+      { "bits": "3:2", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "1", "name": "Pin_Quad_3_0_SPI_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: SPI capable for pin quad [3:0], 0: not capable" },
+      { "bits": "0", "name": "Pin_Quad_3_0_vendor_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for pin quad [3:0], 0: not capable" }
+    ]
+  },
+  {
+    "address": "4/5.i.0052",
+    "name": "ASEP_Control_Interface_Trio_Pin_Capability",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.1.5.2",
+    "page": 70,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:14", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "13", "name": "Pin_Trio_15_13_I2S_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: I2S capable for pin trio [15:13], 0: not capable" },
+      { "bits": "12", "name": "Pin_Trio_15_13_vendor_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for pin trio [15:13], 0: not capable" },
+      { "bits": "11:10", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "9", "name": "Pin_Trio_11_9_I2S_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: I2S capable for pin trio [11:9], 0: not capable" },
+      { "bits": "8", "name": "Pin_Trio_11_9_vendor_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for pin trio [11:9], 0: not capable" },
+      { "bits": "7:6", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "5", "name": "Pin_Trio_7_5_I2S_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: I2S capable for pin trio [7:5], 0: not capable" },
+      { "bits": "4", "name": "Pin_Trio_7_5_vendor_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for pin trio [7:5], 0: not capable" },
+      { "bits": "3:2", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "1", "name": "Pin_Trio_3_1_I2S_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: I2S capable for pin trio [3:1], 0: not capable" },
+      { "bits": "0", "name": "Pin_Trio_3_1_vendor_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for pin trio [3:1], 0: not capable" }
+    ]
+  },
+  {
+    "address": "4/5.i.0053",
+    "address_range_end": "4/5.i.0054",
+    "name": "ASEP_Control_Interface_Duo_Pin_Capability",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.1.5.3",
+    "page": 71,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "13", "name": "Pin_Duo_7_6_I2C_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: I2C capable for pin duo [7:6], 0: not capable (register .0053)" },
+      { "bits": "12", "name": "Pin_Duo_7_6_vendor_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for pin duo [7:6] (register .0053)" },
+      { "bits": "13", "name": "Pin_Duo_15_14_I2C_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: I2C capable for pin duo [15:14], 0: not capable (register .0054)" },
+      { "bits": "12", "name": "Pin_Duo_15_14_vendor_capable", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for pin duo [15:14] (register .0054)" }
+    ]
+  },
+  {
+    "address": "4/5.i.0055",
+    "address_range_end": "4/5.i.0058",
+    "name": "ASEP_Control_Interface_Single_Pin_Capability",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.1.5.4",
+    "page": 73,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "13", "name": "Pin_GPIO_capable_high", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: GPIO capable for highest pin in group, 0: not capable" },
+      { "bits": "12", "name": "Pin_vendor_capable_high", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for highest pin in group, 0: not capable" },
+      { "bits": "1", "name": "Pin_GPIO_capable_low", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: GPIO capable for lowest pin in group, 0: not capable" },
+      { "bits": "0", "name": "Pin_vendor_capable_low", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "1: vendor interface capable for lowest pin in group, 0: not capable" }
+    ]
+  },
+  {
+    "address": "4/5.i.0059",
+    "address_range_end": "4/5.i.0062",
+    "name": "ASEP_Control_Interface_Pin_Config",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.1.6",
+    "page": 76,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "Pin_active_select", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "1xxx_xxxx: quad; 01xx_xxx0: trio; 01xx_xxx1: trio+single; 0010_xx00: upper duo; 0001_00xx: lower duo; 0000_abcd: per bit (a:highest, d:lowest)" },
+      { "bits": "7:6", "name": "Interface_select_n3", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "For highest single/upper duo/trio/quad: 0: vendor specific; 1: GPIO/I2C/I2S/SPI" },
+      { "bits": "5:4", "name": "Interface_select_n2", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "For second highest single: 0: vendor specific; 1: GPIO" },
+      { "bits": "3:2", "name": "Interface_select_n1", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "For second lowest single/lower duo: 0: vendor specific; 1: GPIO/I2C" },
+      { "bits": "1:0", "name": "Interface_select_n0", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "For lowest single: 0: vendor specific; 1: GPIO" }
+    ]
+  },
+  {
+    "address": "4.i.0100",
+    "name": "FoFa_ReturnPath",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.6.1",
+    "page": 86,
+    "rw_type": "RO",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:6", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "5:0", "name": "Ret_DLP_RX", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "DLP_RX_ID with identical stream type which leads back to node where this DLP_TX queue originates" }
+    ]
+  },
+  {
+    "address": "4.i.0101",
+    "name": "ASE_Status",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.6.2",
+    "page": 87,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:1", "name": "dataStarve_timeout", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Timeout limit in multiples of 2^PTB ticks (step size 32.768us); 0: function not used" },
+      { "bits": "0", "name": "dataStarve", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "1: set in ASE to signal no data provided by application interface; 0: normal operation" }
+    ]
+  },
+  {
+    "address": "4.i.0102",
+    "name": "ASE_Test",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.6.3",
+    "page": 87,
+    "rw_type": "RW",
+    "access": "L",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:4", "name": "Reserved", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "Reserved" },
+      { "bits": "3:2", "name": "Test_Mode", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "0: TestDummy; 1: ASE Test (sends sequence of all supported ASEP packets); 2-3: reserved" },
+      { "bits": "1:0", "name": "Reserved", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "Reserved" }
+    ]
+  },
+  {
+    "address": "4.i.0103",
+    "name": "ASE_TestDummy_Configuration",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.6.4",
+    "page": 88,
+    "rw_type": "RW",
+    "access": "L",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:14", "name": "Sequence_of_packets", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "0: packet 0 sent; 1: packets 0-1; 2: packets 0-2; 3: packets 0-3" },
+      { "bits": "13:12", "name": "Packet0_payload", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "0: zeros; 1: ones; 2: PRBS11 with seed; 3: reserved" },
+      { "bits": "11:10", "name": "Packet1_payload", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "0: zeros; 1: ones; 2: PRBS11 with seed; 3: reserved" },
+      { "bits": "9:8", "name": "Packet2_payload", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "0: zeros; 1: ones; 2: PRBS11 with seed; 3: reserved" },
+      { "bits": "7:6", "name": "Packet3_payload", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "0: zeros; 1: ones; 2: PRBS11 with seed; 3: reserved" },
+      { "bits": "5:4", "name": "PTB_configuration", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "0: no timestamps; 1: ingress time stamp; 2: presentation time stamp; 3: reserved" },
+      { "bits": "3:0", "name": "Reserved", "rw_type": "RW", "access": "L", "privilege": "RID", "description": "Reserved" }
+    ]
+  },
+  {
+    "address": "4.i.0104",
+    "address_range_end": "4.i.0111",
+    "name": "ASE_TestDummy_Payload_Definition",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.6.5",
+    "page": 89,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "Length", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Length of packet payload in bytes (registers 4.i.0104-0107 for packets 0-3)" },
+      { "bits": "10:0", "name": "Seed", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Seed value for PRBS11 payload; reloaded for every TestDummy ASEP packet (registers 4.i.0108-0111 for packets 0-3)" }
+    ]
+  },
+  {
+    "address": "4.i.0210",
+    "name": "SPI_Transmission_Cycle_Turnaround",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.6.6.1",
+    "page": 90,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "SPI_turnaround_time", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Integer multiple of SPI data conversion cycle; see 3.6.6.2 and 7.7.1.3" },
+      { "bits": "7:0", "name": "SPI_schedule_transmission_cycle", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0: reserved; 1-255: in unit TDD cycle; see also 7.7.1.1" }
+    ]
+  },
+  {
+    "address": "4.i.0211",
+    "address_range_end": "4.i.0212",
+    "name": "SPI_Data_Conversion_Cycle",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.6.6.2",
+    "page": 90,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "SPIconvCycle_15_0", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "SPIconvCycle[15:0] in multiples of 4ns; see also 7.7.1.2 (register 4.i.0211)" },
+      { "bits": "3:0", "name": "SPIconvCycle_19_16", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "SPIconvCycle[19:16] (register 4.i.0212 bits 3:0)" }
+    ]
+  },
+  {
+    "address": "4.i.0213",
+    "name": "SPI_Error_Status",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.6.6.3",
+    "page": 91,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:2", "name": "Reserved", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "1", "name": "stcRxErr", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "SPI schedule transmission cycle elapsed without receiving data to ASD" },
+      { "bits": "0", "name": "stcTxErr", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "SPI schedule transmission cycle elapsed without second transmit opportunity" }
+    ]
+  },
+  {
+    "address": "4/5.i.0200",
+    "name": "I2C_clock_rate",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.4.1",
+    "page": 78,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:6", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "5:0", "name": "I2C_clock_rate", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "I2C slave side clock rate in multiples of 100kHz; 0x00 resets the I2C interface controller" }
+    ]
+  },
+  {
+    "address": "4/5.i.0201",
+    "address_range_end": "4/5.i.0208",
+    "name": "I2C_slave_addresses",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.4.2",
+    "page": 78,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15", "name": "Offset_address_length_flag_N", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "1: 16-bit offset address; 0: 8-bit offset address (upper slave address)" },
+      { "bits": "14:8", "name": "Slave_address_N", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "7-bit slave address (upper); 0x78 (1111 000) when unused" },
+      { "bits": "7", "name": "Offset_address_length_flag_M", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "1: 16-bit offset address; 0: 8-bit offset address (lower slave address)" },
+      { "bits": "6:0", "name": "Slave_address_M", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "7-bit slave address (lower); 0x78 (1111 000) when unused" }
+    ]
+  },
+  {
+    "address": "4/5.i.0200",
+    "name": "SPI_Configuration",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.5.1",
+    "page": 80,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:14", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "13:4", "name": "SCK_frequency", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "SCK frequency in 100kHz units; valid 0x01-0x3FF; 0x00 deactivates/resets SPI" },
+      { "bits": "3:2", "name": "Transmission_mode", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "00: Motorola mode; 01: TI mode (one pulse width CS); others: reserved" },
+      { "bits": "1:0", "name": "SPI_mode", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "00: CPOL=0/CPHA=0; 01: CPOL=0/CPHA=1; 10: CPOL=1/CPHA=0; 11: CPOL=1/CPHA=1" }
+    ]
+  },
+  {
+    "address": "4/5.i.0201",
+    "name": "SPI_Minimum_Idle",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.5.2",
+    "page": 80,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "7:0", "name": "SPI_minimum_idle", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "SPI lower bound of idle period in units of 16ns" }
+    ]
+  },
+  {
+    "address": "4/5.i.0200",
+    "name": "GPIO_Sampling",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.6.1",
+    "page": 80,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:14", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "13", "name": "GPIO_Sampling_Mode", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0: Full sampling transmission mode (FS); 1: Edge position transmission mode (EG)" },
+      { "bits": "12:0", "name": "GPIO_Pin_Sampling_Period", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "uint; 0: reserved; all other: pin sampling period in multiples of PTB ticks; applies to FS and EG mode" }
+    ]
+  },
+  {
+    "address": "4/5.i.0201",
+    "address_range_end": "4/5.i.0216",
+    "name": "GPIO_Pin_Configuration",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.6.2",
+    "page": 81,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "VERIFY",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "Reserved", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "7", "name": "Pin_availability", "rw_type": "RO", "access": "O", "privilege": "RID", "description": "0: not available; 1: available" },
+      { "bits": "6", "name": "GPIO_signal_direction", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0: GPI (Leaf ASE to Root ASD); 1: GPO (Root ASE to Leaf ASD)" },
+      { "bits": "5:3", "name": "GPIO_pin_default_reset_behavior", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "000: floating; 001: pull-down to low; 010: pull-up to high; 111-011: user defined" },
+      { "bits": "2:1", "name": "GPO_drive_mode", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "00: push/pull; 01: open drain; 10-11: user defined" },
+      { "bits": "0", "name": "GPIO_enable", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0: disable; 1: enable" }
+    ]
+  },
+  {
+    "address": "4/5.i.0200",
+    "name": "I2S_Data_Format",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.8.1",
+    "page": 84,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:12", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "11:8", "name": "I2S_audio_sample_bit_depth", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0: 8 bit; 1: 12 bit; 2: 16 bit; 3: 20 bit; 4: 24 bit; 5: 32 bit; 6-15: reserved" },
+      { "bits": "7", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "6:4", "name": "I2S_data_format", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0: I2S format; 1: left-justified; 2: right-justified; 3: TDM mode; 4-7: reserved" },
+      { "bits": "3", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "2:0", "name": "Number_of_channels", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "uint; 0: reserved; 1-8: number of channels" }
+    ]
+  },
+  {
+    "address": "4/5.i.0201",
+    "name": "I2S_Audio_Sample_Rate",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.8.2",
+    "page": 85,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:5", "name": "Reserved", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Reserved" },
+      { "bits": "4:0", "name": "Audio_sampling_frequency", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0x00: 8.000kHz; 0x01: 11.025kHz; 0x02: 16.000kHz; ... 0x10: 192.000kHz; 0x11: 352kHz; 0x12: 384kHz; 0x13: 768kHz; others reserved" }
+    ]
+  },
+  {
+    "address": "4/5.i.0202",
+    "address_range_end": "4/5.i.0203",
+    "name": "I2S_Sampling_Sync",
+    "domain": 4,
+    "subdomain_kind": "DLP_TX_ID",
+    "section": "3.5.8.3",
+    "page": 86,
+    "rw_type": "RW",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15", "name": "Timing_host_select", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0: I2S TX is in master mode; 1: I2S RX is in master mode (register .0202)" },
+      { "bits": "13", "name": "Target_clock_select", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "0: SCK; 1: MCK (register .0202)" },
+      { "bits": "9:0", "name": "Coefficient_K", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Unsigned integer; fixed ratio between SCK/MCK and audio sampling rate; valid 1-1023; 0: reserved (register .0202)" },
+      { "bits": "15:0", "name": "Divisor_N", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Unsigned integer; valid 1-16535; 0: reserved (register .0203)" }
+    ]
+  },
+  {
+    "address": "5.i.0100",
+    "name": "ASD_Status",
+    "domain": 5,
+    "subdomain_kind": "DLP_RX_ID",
+    "section": "3.7.1",
+    "page": 91,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:0", "name": "reasErr", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Saturating counter in ASD to track ASEP packet reassembly errors" }
+    ]
+  },
+  {
+    "address": "5.i.0101",
+    "name": "ASD_Watchdog1",
+    "domain": 5,
+    "subdomain_kind": "DLP_RX_ID",
+    "section": "3.7.2",
+    "page": 92,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:1", "name": "protocol_response_timeout", "rw_type": "RW", "access": "O", "privilege": "RID", "description": "Timeout limit in multiples of 2^PTB ticks (step size 32.768us); 0: function not used" },
+      { "bits": "0", "name": "Timeout_flag", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "1: set in ASD to signal no timely response received by remote ASE (bidirectional ASEPs only); 0: normal operation" }
+    ]
+  },
+  {
+    "address": "5.i.0102",
+    "name": "ASD_Status2",
+    "domain": 5,
+    "subdomain_kind": "DLP_RX_ID",
+    "section": "3.7.3",
+    "page": 92,
+    "rw_type": "SC",
+    "access": "O",
+    "privilege": "RID",
+    "reset": "0x0000",
+    "optional_feature": null,
+    "fields": [
+      { "bits": "15:8", "name": "duplicate_packet", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Saturating counter in ASD to track duplicate ASEP packets" },
+      { "bits": "7:0", "name": "missing_packet", "rw_type": "SC", "access": "O", "privilege": "RID", "description": "Saturating counter in ASD to track missing ASEP packets" }
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+# pipeline/requirements.txt
+docling==2.36.1
+boto3>=1.38.0
+anthropic>=0.49.0
+Pillow>=10.0.0
+PyYAML>=6.0
+tqdm>=4.66.0

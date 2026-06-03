@@ -1,0 +1,30 @@
+{
+  "mcp": {
+    "mcp4eda": {
+      "type": "local",
+      "command": [
+        "/home/silicogen/.nvm/versions/node/v25.7.0/bin/node",
+        "/home/silicogen/MCP4EDA/build/index.js"
+      ],
+      "environment": {
+        "PATH": "/silicogenplayground/questasim/bin:/silicogenplayground/Work/vlsi/tools/OpenROAD-flow-scripts/tools/install/yosys/bin:/usr/local/bin:/usr/bin:/bin:/home/silicogen/.local/bin:/home/silicogen/.nvm/versions/node/v25.7.0/bin",
+        "HOME": "/home/silicogen"
+      },
+      "enabled": true
+    },
+    "tavily": {
+      "type": "remote",
+      "url": "https://mcp.tavily.com/mcp/?tavilyApiKey=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",
+      "enabled": true
+    },
+    "grep-mcp": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "grep-mcp"
+      ],
+      "enabled": true
+    }
+  },
+  "$schema": "https://www.silicogenai.space/config.json"
+}
