@@ -1,4 +1,3 @@
-.claude/
 .silicogen/
 obj_dir/
 questa_work/
@@ -8,4 +7,4 @@ __pycache__/
 *.pyc
 ASA_Technical_Specification_ver2.0.pdf
 /micro-architecture-oam-control-plane.md
-silicogen.json
+/silicogen.json
