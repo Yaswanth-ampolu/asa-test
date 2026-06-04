@@ -2,7 +2,6 @@
 obj_dir/
 questa_work/
 questa_work_asep_gpio/
-images/
 __pycache__/
 *.pyc
 ASA_Technical_Specification_ver2.0.pdf
